@@ -1,0 +1,93 @@
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+  
+  th, td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .menu-container {
+    width: 20%;
+    float: left;
+  }
+  
+  .menu {
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .menu-item {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    color: #333333;
+    text-decoration: none;
+  }
+  
+  .menu-item:hover {
+    background-color: #e6e6e6;
+  }
+  
+  .logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  img {
+    width: 100px; 
+  }
+  
+  .company-name {
+    margin-top: 10px; 
+    font-size: 24px;
+  }
+  
+  .menu-item.active {
+    background-color: #e6e6e6;
+}
+
+.form-container form {
+    margin-left: 8px;
+}
+
+form input[type="date"], form textarea {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-left: 8px;
+  }
+  
+  form .form-group {
+  margin: 0 auto;
+  margin-left: 8px;
+  text-align:center;
+  }
+  
+  header nav {
+  display: flex;
+  margin-left: 8px;
+  justify-content: space-between;
+  align-items: center;
+  }
+  
+  footer a:hover {
+  color: #ccc;
+  text-decoration: none;
+  }
+  

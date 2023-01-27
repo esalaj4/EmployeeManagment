@@ -1,0 +1,91 @@
+
+
+  .menu-container {
+    width: 20%;
+    float: left;
+  }
+  
+  .menu {
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  .company-name {
+    margin-top: 10px; 
+    font-size: 24px;
+  }
+  
+  .menu-item.active {
+    background-color: #e6e6e6;
+}
+  
+  .menu-item {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    color: #333333;
+    text-decoration: none;
+  }
+  
+  .menu-item:hover {
+    background-color: #e6e6e6;
+  }
+  
+  .logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  img {
+    width: 100px; 
+  }
+  
+  
+  .container {
+    width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    margin-top: 10px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="number"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  input[type="submit"] {
+    width: 100%;
+    background-color: #5896f1;
+    color: white;
+    padding: 14px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #3767af;
+  }
