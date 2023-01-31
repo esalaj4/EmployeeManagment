@@ -9,7 +9,7 @@ class EmployeeController extends Controller
 {
     public function employeeProjects()
     {
-        $projects = Project::all();
+        $projects = Project::with('projectManagers')->get();
         return view('employee-projects', compact('projects'));
     }
 }

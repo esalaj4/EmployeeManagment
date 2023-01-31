@@ -17,12 +17,11 @@ class TeamFactory extends Factory
      */
     public function definition()
     {
-        $teamLeaderId=\App\Models\TeamLeader::all()->pluck('id')->toArray();
-        $teamLeaderId[]=null;
+        $teamLeaderId=\App\Models\TeamLeader::all()->pluck('id');
         $faker = Faker::create();
         return [
             'teamName' => "team" . $faker->numberBetween(1,10),
-            'team_leader_id'=>$teamLeaderId[array_rand($teamLeaderId)] 
+            'team_leader_id'=>$teamLeaderId->random(),
         ];
     }
 }

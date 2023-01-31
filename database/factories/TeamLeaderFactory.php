@@ -21,7 +21,7 @@ class TeamLeaderFactory extends Factory
         return [
             'name' => $faker->name,
             'surname' => $faker->name,
-            'username' => str_replace(' ', '', strtolower($faker->name)),
+            'email' => $faker->email,
             'password' =>"password"
 
         ];

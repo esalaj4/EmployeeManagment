@@ -33,13 +33,9 @@
       @foreach($projects as $project)
       <tr>
         <td>{{ $project->projectName }}</td>
-        @if($project->projectManagers->name == null)
-        <td>Open position</td>
-        @else
-        <td>{{ $project->projectManagers->name }}</td>
-        @endif
+        <td>{{ $project->projectManagers ? $project->projectManagers->name : 'No project manager'}}</td>
         <td>{{ $project->description }}</td>
-        <td>{{ $employee->created_at }}</td>
+        <td>{{ $project->created_at }}</td>
       </tr>
     @endforeach
     </table>

@@ -10,11 +10,10 @@ class Employee extends Model
     use HasFactory;
     protected $table = 'employees';
     protected $primaryKey='id';
-    protected $fillable=['name','surname','days_off'];
-
+    protected $fillable=['name','surname','days_off','is_admin'];
     public function team()
     {
-        return $this->belongsTo(Team::class);
+        return $this->belongsTo(Team::class,'team_id','id');
     }
 
     public function projects()

@@ -17,8 +17,9 @@ return new class extends Migration
             $table->increments('id');
             $table->string('name')->default('');
             $table->string('surname')->default('');
-            $table->string('username');
+            $table->string('email')->unique();
             $table->string('password');
+            $table->boolean('is_admin')->default(0);
             $table->integer('free_days')->default('25');
             $table->unsignedInteger('team_id')->nullable();
             $table->foreign('team_id')->references('id')->on('teams')->onDelete('cascade'); 

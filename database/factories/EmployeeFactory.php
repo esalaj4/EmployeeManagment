@@ -19,16 +19,15 @@ class EmployeeFactory extends Factory
      */
     public function definition()
     {
-        $teamId=\App\Models\Team::all()->pluck('id')->toArray();
-        $teamId[]=null;
+        $teamId = \App\Models\Team::all()->pluck('id');
         $faker = Faker::create();
         return [
             'name' => $faker->name,
             'surname' => $faker->name,
             'free_days' => 25,
-            'username' => str_replace(' ', '', strtolower($faker->name)),
+            'email' => $faker->email,
             'password' =>"password",
-            'team_id'=>$teamId[array_rand($teamId)] 
+            'team_id'=>$teamId->random()
 
         ];
     }

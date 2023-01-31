@@ -16,12 +16,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        \App\Models\ProjectManager::factory()->count(7)->create();
-        \App\Models\TeamLeader::factory()->count(5)->create();
+         \App\Models\ProjectManager::factory()->count(7)->create();
+        /*\App\Models\TeamLeader::factory()->count(5)->create();
         \App\Models\Team::factory()->count(5)->create();
         \App\Models\Project::factory()->count(10)->create();
         \App\Models\Employee::factory()->count(20)->create();
-        \App\Models\Admin::factory()->count(1)->create();
-        $this->call(EmployeeProjectSeeder::class); 
+        \App\Models\Admin::factory()->count(1)->create(); */
+        //\App\Models\User::factory()->count(5)->create();
+       // $this->call(EmployeeProjectSeeder::class); 
     }
 }

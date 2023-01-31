@@ -21,8 +21,8 @@ class ProjectManagerFactory extends Factory
         return [
             'name' => $faker->name,
             'surname' => $faker->name,
-            'username' => str_replace(' ', '', strtolower($faker->name)),
-            'password' =>"password"
+            'email' => $faker->email,
+            'password' =>  bcrypt("12345678"),
 
         ];
     }

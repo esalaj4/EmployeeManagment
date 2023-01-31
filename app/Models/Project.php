@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Project extends Model
 {
     use HasFactory;
-
     protected $fillable=['projectName','description'];
 
     public function employees()
@@ -18,7 +17,6 @@ class Project extends Model
 
     public function projectManagers()
     {
-        return $this->belongsTo(ProjectManager::class);
+        return $this->belongsTo(ProjectManager::class, 'pm_id', 'id');
     }
-   
 }

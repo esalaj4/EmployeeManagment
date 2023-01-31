@@ -46,18 +46,28 @@ Route::get('admin/', function () {
     return view('admin');
 });
 
-Route::get('admin/', function () {
-    return view('admin');
-});
 
 Route::get('admin-vacation/', function () {
     return view('admin-vacation');
 });
 
-Route::get('login/', function () {
-    return view('login');
+Route::get('/', function () {
+    return view('welcome');
 });
 
 Route::get('admin-enter-employee/', function () {
     return view('admin-enter-employee');
 });
+
+Route::post('/login', [UserController::class, 'login']);
+
+
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Auth::routes();
+
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

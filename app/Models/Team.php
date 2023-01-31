@@ -8,7 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Team extends Model
 {
     use HasFactory;
-
     protected $fillable=['teamName'];
     public function employees()
     {
@@ -17,6 +16,6 @@ class Team extends Model
 
     public function leader()
     {
-        return $this->belongsTo(TeamLeader::class);
+        return $this->belongsTo(TeamLeader::class,'team_leader_id','id');
     }
 }

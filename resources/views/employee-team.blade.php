@@ -27,7 +27,6 @@
       <tr>
         <th>Ime</th>
         <th>Prezime</th>
-      </tr>
     </table>
   </body>
 </html>
