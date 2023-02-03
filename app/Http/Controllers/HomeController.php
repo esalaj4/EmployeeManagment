@@ -23,6 +23,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $user = auth()->user();
+        if ($user->role->first()->name === 'employee') {
+            return view('employee-team');
+        } elseif ($user->role->first()->name === 'teamLeader') {
+            return view('team-leader');
+        }
+    
     }
 }

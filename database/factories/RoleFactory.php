@@ -3,12 +3,11 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Faker\Factory as Faker;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Team>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Role>
  */
-class TeamFactory extends Factory
+class RoleFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,9 +16,8 @@ class TeamFactory extends Factory
      */
     public function definition()
     {
-        $faker = Faker::create();
         return [
-            'teamName' => "team" . $faker->numberBetween(1,100),
+            
         ];
     }
 }

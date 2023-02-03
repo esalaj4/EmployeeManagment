@@ -13,15 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('admins', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('teams', function (Blueprint $table) {
+            $table->id();
             $table->string('name');
-            $table->string('surname');
-            $table->string('username')->unique();
-            $table->string('password');
+            $table->unsignedBigInteger('team_leader_id')->nullable();
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('admins');
+        Schema::dropIfExists('teams');
     }
 };

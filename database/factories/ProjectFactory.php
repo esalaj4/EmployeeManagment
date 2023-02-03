@@ -16,12 +16,11 @@ class ProjectFactory extends Factory
      */
     public function definition()
     {
-        $projectManagerId = \App\Models\ProjectManager::all()->pluck('id');
+    
         $faker = Faker::create();
         return [
             'projectName' => "project" . $faker->numberBetween(1,10),
             'description' => $faker->text(),
-            'pm_id'=>$projectManagerId->random()
         ];
     }
 }

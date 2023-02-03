@@ -17,8 +17,6 @@ return new class extends Migration
             $table->increments('id');
             $table->string('projectName')->default('');
             $table->string('description')->default('');
-            $table->unsignedInteger('pm_id')->nullable();
-            $table->foreign('pm_id')->references('id')->on('project_managers')->onDelete('cascade'); 
             $table->timestamps();
         });
     }

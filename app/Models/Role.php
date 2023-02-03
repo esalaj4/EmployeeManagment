@@ -5,12 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TeamLeader extends Model
+class Role extends Model
 {
     use HasFactory;
-    protected $fillable=['name','surname','is_admin'];
-    public function team()
+
+    protected $fillable = ['name'];
+
+    public function users()
     {
-        return $this->hasOne(Team::class);
+        return $this->hasMany(User::class);
     }
+
+
 }

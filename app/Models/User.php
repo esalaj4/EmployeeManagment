@@ -21,7 +21,25 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role_id',
     ];
+
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
+    
+
+    //user employee moze biti u 1 timu
+    public function teams()
+    {
+        return $this->belongsToMany(Team::class, 'team_user');
+    }
+
+    public function teamsAsTeamLeader()
+    {
+        return $this->hasMany(Team::class, 'team_leader_id');
+    }
 
     /**
      * The attributes that should be hidden for serialization.
